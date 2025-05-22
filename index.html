@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Galeri Karya | Hilmi Abikautzar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Galeri Karya Terbaik</h1>
+
+  <div class="gallery">
+    <div class="gallery-item">
+      <img src="img1.jpeg" alt="Karya 1">
+      <div class="description"><b> Fokus yang Tersirat</b>
+        <p>
+        Foto ini mengeksplorasi permainan fokus dan kedalaman, menampilkan dua sosok yang sengaja diburamkan di latar depan dengan latar belakang hutan hijau yang tajam dan jelas. Teknik ini mengarahkan perhatian pemirsa pada keindahan alam sambil tetap mempertahankan kehadiran manusia sebagai bagian dari narasi visual. Garis-garis vertikal samar di atas gambar menambah kesan bahwa momen ini dilihat dari balik batas, menciptakan nuansa intim dan reflektif. Komposisi ini merefleksikan hubungan antara manusia dan alam, serta bagaimana keduanya saling melengkapi meski tidak selalu menjadi pusat perhatian.</p></div>
+    </div>
+    <div class="gallery-item">
+      <img src="img2.jpeg" alt="Karya 2">
+      <div class="description"><b>berdua dalam sunyi</b>
+        <p>Foto ini menangkap momen tenang di pinggir jalan, di mana seorang bapak duduk sendirian di sebuah bangku kayu yang menyatu dengan suasana urban bernuansa gelap dan teduh. Ia tampak mengenakan kemeja biru dan celana hitam, memandang ke arah jalan sambil memegang sesuatu di tangannya, mungkin minuman. Di sampingnya, seekor kucing tidur dengan damai di sisi bangku yang sama, menambah kesan hangat dan manusiawi pada suasana yang sunyi itu. Latar belakang berupa dinding batu dan tiang-tiang kayu besar menambah kesan artistik dan kontras yang kuat antara kesibukan kota dan ketenangan dua makhluk ini dalam diam. Sebuah potret yang sederhana namun sarat makna tentang kebersamaan dalam kesendirian.</p></div>
+    </div>
+    <div class="gallery-item">
+      <img src="img3.jpeg" alt="Karya 3">
+      <div class="description"><b>Raksasa yang Runtuh, Harapan yang Bertahan</b>
+        <p>
+        Foto hitam-putih ini menangkap sebuah patung monumental berbentuk tangan raksasa yang mulai hancur, dengan sosok manusia terpaut di sela-sela reruntuhan. Jaring besi yang mencuat dari bagian yang rusak memperkuat kesan kehancuran, namun figur manusia yang menggantung menambahkan unsur dramatis sekaligus simbolis—seolah bertahan di tengah keruntuhan kekuasaan atau perlindungan. Komposisi ini menggugah perasaan tentang rapuhnya kekuatan dan ketabahan manusia dalam menghadapi kehancuran.</p></div>
+    </div>
+  </div>
+
+  <script>
+    const items = document.querySelectorAll('.gallery-item');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    items.forEach(item => {
+      observer.observe(item);
+    });
+  </script>
+
+</body>
+</html>

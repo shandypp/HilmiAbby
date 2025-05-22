@@ -1,0 +1,49 @@
+
+    
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: F3F3E0;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .gallery-item {
+      background-color: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      transform: scale(0.9);
+      opacity: 0;
+      transition: transform 0.6s ease, opacity 0.6s ease;
+    }
+
+    .gallery-item.visible {
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      display: block;
+    }
+
+    .description {
+      padding: 1rem;
+      text-align: center;
+      font-size: 1rem;
+    }
+  
